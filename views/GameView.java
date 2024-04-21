@@ -1,3 +1,5 @@
+package views;
+
 // GameView class
 import java.util.Scanner;
 
@@ -26,7 +28,7 @@ public class GameView {
     private void displayGrid(char[][] grid){
         // Display the grid
         for (int i = 0; i < 5; i++) {
-            for (int j = 0; i < 5; j++) {
+            for (int j = 0; j < 5; j++) {
                 System.out.print(grid[i][j] + " ");
             }
             System.out.println();
@@ -64,9 +66,10 @@ public class GameView {
 
     // Get user input for player movement (e.g., 'w', 'a', 's', 'd')
     public String getUserInput() {
-        // Read user input (e.g., from console)
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter your move (w/a/s/d): ");
-        return scanner.nextLine();
+        try (// Read user input (e.g., from console)
+        Scanner scanner = new Scanner(System.in)) {
+            System.out.print("Enter your move (w/a/s/d): ");
+            return scanner.nextLine();
+        }
     }
 }

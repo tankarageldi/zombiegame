@@ -9,7 +9,7 @@ public class ZombieCreator {
         Random random = new Random();
         List<Zombie> zombies = new ArrayList<>();
         while(numberOfZombies > 0){
-            Zombie z = new Zombie(new Location(random.nextInt(6),random.nextInt(6)));
+            Zombie z = new Zombie(new Location(random.nextInt(5),random.nextInt(5)));
             zombies.add(z);
             numberOfZombies--;
         }
