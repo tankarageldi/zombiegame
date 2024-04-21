@@ -5,11 +5,11 @@ import java.util.List;
 import java.util.Random;
 
 public class ZombieCreator {
-    public static List<Movable> createZombies(int numberOfZombies){
+    public static List<Zombie> createZombies(int numberOfZombies){
         Random random = new Random();
-        List<Movable> zombies = new ArrayList<>();
+        List<Zombie> zombies = new ArrayList<>();
         while(numberOfZombies > 0){
-            Movable z = new Zombie(new Location(random.nextInt(6),random.nextInt(6)));
+            Zombie z = new Zombie(new Location(random.nextInt(6),random.nextInt(6)));
             zombies.add(z);
             numberOfZombies--;
         }

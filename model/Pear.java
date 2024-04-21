@@ -5,7 +5,7 @@ public class Pear {
     public Pear(Location loc){
         this.loc = loc;
     }
-    public Location geLocation(){
+    public Location getLocation(){
         return loc;
     }
 }
